@@ -20,7 +20,7 @@ html {
 
     --grey-dark: #4D5E77;
     --grey-blue: #A1B2CD;
-    --grey-medium: #D3D9E2;
+    --grey-medium: #EAECF2;
     --grey-light: #E5EAF1;
 
     --blue-alt: #5699FF;
@@ -37,6 +37,8 @@ body {
 body, button, input, textarea {
     /* intervalo de tamanho */
     font-size: clamp(14px, 1.6rem, 2vw); /* clamp(mínimo que pode chegar, padrão, máximo que pode chegar) */ 
+
+    font-family: 'Open Sans', sans-serif;
 }
 
 .content {
