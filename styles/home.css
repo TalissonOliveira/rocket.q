@@ -40,6 +40,9 @@ main h2 {
 input {
     padding: 0 1.6rem;
     border: .2rem solid var(--grey-blue);
+    outline: none;
+
+    transition: border-color .2s;
 }
 
 input, button, .button {
