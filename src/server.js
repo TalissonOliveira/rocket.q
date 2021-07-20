@@ -10,6 +10,8 @@ server.set('view engine', 'ejs')
 server.use(express.static('public'))
 /* Definir o caminho da pasta views */
 server.set('views', path.join(__dirname, 'views'))
+/* middleware para decoficar e poder pegar dados do body */
+server.use(express.urlencoded({extended: true}))
 
 server.use(routes)
 
