@@ -35,5 +35,20 @@ module.exports = {
         await db.close()
         
         res.redirect(`/room/${roomId}`)
+    },
+
+    async open(req, res) {
+        const db = await Database()
+        const roomId = req.params.room
+        const questions = await db.all(`SELECT * FROM questions WHERE room = ${roomId} AND read = 0`)
+        const questionsRead = await db.all(`SELECT * FROM questions WHERE room = ${roomId} AND read = 1`)
+
+        res.render('room', {roomId, questions, questionsRead})
+    },
+
+    async enter(req, res) {
+        const roomId = req.body.roomId
+
+        res.redirect(`/room/${roomId}`)
     }
 }
